@@ -1,0 +1,81 @@
+.my-sections {
+  margin-top: 25%;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about > div:nth-child(1) {
+  grid-column: span 1;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+.about_info h1 {
+  color: #f2cc8f;
+  font-family: Aclonica;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 3%;
+  text-decoration: underline;
+}
+.about_info p {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #3d405b;
+  text-align: justify;
+}
+.about > img:nth-child(2) {
+  grid-column: span 1;
+  width: 350px;
+  height: 350px;
+  margin-left: 25%;
+}
+/* responsive tablet mode*/
+@media screen and (max-width: 950px) {
+  .about {
+    height: 450px;
+    padding-top: 15%;
+  }
+  .about_info h1 {
+    font-size: 40px;
+  }
+  .about_info p {
+    font-size: 15px;
+  }
+  .about > img:nth-child(2) {
+    width: 250px;
+    height: 250px;
+    margin-left: 25%;
+  }
+}
+/* responsive mobiel mode*/
+@media screen and (max-width: 814px) {
+  .my-sections {
+    margin-top: 75%;
+  }
+  .about {
+    grid-template-columns: repeat(1, 1fr);
+    height: 600px;
+  }
+  .about > div:nth-child(1) {
+    width: 400px;
+    align-items: center;
+  }
+  .about_info h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .about_info p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .about > img:nth-child(2) {
+    width: 250px;
+    height: 250px;
+    align-self: center;
+  }
+}

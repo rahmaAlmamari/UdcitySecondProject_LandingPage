@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Aclonica");
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: #3d405b;
+  z-index: 1000;
+}
+ul {
+  list-style-type: none;
+  margin-right: 20px;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  font-family: Aclonica;
+  font-size: 20px;
+  color: #3d405b;
+  font-style: bold;
+}
+.logo li {
+  background-color: #f2cc8f;
+  margin-right: 5px;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+.sections-link {
+  display: flex;
+  justify-content: flex-end;
+  font-family: cursive;
+  color: #f4f1de;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.sections-link li {
+  margin-left: 20px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+/* Active state in the navbar link */
+#dynamicLink li.active a {
+  color: #f2cc8f;
+  border-style: solid;
+  border-color: #f2cc8f;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*the active state in the section*/
+div.active-section {
+  -webkit-box-shadow: 1px 2px 42px 10px rgba(161, 143, 161, 1);
+  -moz-box-shadow: 1px 2px 42px 10px rgba(161, 143, 161, 1);
+  box-shadow: 1px 2px 42px 10px rgba(161, 143, 161, 1);
+  border-radius: 15px;
+}
+/* responsive tablet mode*/
+@media screen and (max-width: 950px) {
+  nav {
+    position: fixed;
+  }
+}
+/* responsive mobile mode*/
+@media screen and (max-width: 631px) {
+  .sections-link {
+    flex-direction: column-reverse;
+    align-content: flex-end;
+    align-items: flex-end;
+  }
+  .logo {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

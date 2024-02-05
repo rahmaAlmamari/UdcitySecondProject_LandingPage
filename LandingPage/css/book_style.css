@@ -1,0 +1,118 @@
+.booksections {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 5%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.booksections > h1:nth-child(1) {
+  grid-column: span 1;
+  text-align: center;
+  margin-bottom: 5%;
+  font-family: "Helvetica Neue", sans-serif;
+}
+.booksections > div:nth-child(2) {
+  grid-column: span 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 5%;
+}
+.card_group > div:nth-child(1) {
+  grid-column: span 1;
+}
+.card_group > div:nth-child(2) {
+  grid-column: span 1;
+}
+.card_group > div:nth-child(3) {
+  grid-column: span 1;
+}
+.card_group > div:nth-child(4) {
+  grid-column: span 1;
+}
+.card_group .card img {
+  width: 70%;
+  height: 70%;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+.card_group .card h4 {
+  width: 5px;
+  height: 5px;
+  font-family: Aclonica;
+  margin-left: 30%;
+  margin-top: 5%;
+  text-align: center;
+  color: #3d405b;
+}
+.card_group .card {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  background: #f4f1de;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-box-shadow: 7px 7px 14px 1px rgba(207, 192, 207, 0.85);
+  -moz-box-shadow: 7px 7px 14px 1px rgba(207, 192, 207, 0.85);
+  box-shadow: 7px 7px 14px 1px rgba(207, 192, 207, 0.85);
+}
+
+.card_group .card::before,
+.card_group .card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #3d405b;
+  transition: all 0.5s;
+}
+
+.card_group .card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card_group .card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+
+.card_group .card:hover::before,
+.card_group .card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.card_group .card:hover:after {
+  content: "JOIN SECTION";
+  color: #f4f1de;
+}
+/* responsive tablet mode*/
+@media screen and (max-width: 950px) {
+  .booksections {
+    height: 800px;
+  }
+  .booksections > div:nth-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20%;
+  }
+}
+/* responsive mobiel mode*/
+@media screen and (max-width: 630px) {
+  .booksections {
+    height: 1500px;
+  }
+  .booksections > div:nth-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 30%;
+    margin-top: 0%;
+  }
+}
